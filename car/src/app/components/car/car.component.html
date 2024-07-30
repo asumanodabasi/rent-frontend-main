@@ -22,8 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of cars | filterPipe:filterText" (click)="setCurrentCar(car)" routerLink="/cars/car/{{car.id}}"
-       [class]="getCurrentCar(car)" >
+      <tr *ngFor="let car of cars | filterPipe:filterText">
        <th scope="row">{{car.id}}</th> 
         <td>{{car.carName}}</td>
         <td>{{car.brandId}}</td>

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'car';
+  
+  title: string = 'E-Ticaret';
+   currentBrand:string;
+  currentColor:string;
+  // getChildData(data:string){
+  //   this.currentBrand = data;
+  //   this.currentColor=data;
+  // }
 }
