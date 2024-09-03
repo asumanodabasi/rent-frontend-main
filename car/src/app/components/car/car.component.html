@@ -9,6 +9,7 @@
   </div>
   
 <table  class="table">
+  <span [class]="getCars" routerLink="/cars" >Tüm Arabalar</span>
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -22,7 +23,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of cars | filterPipe:filterText">
+      <tr (click)="setCurrentCar(car)" routerLink="/cars/image/{{car.id}}"
+       *ngFor="let car of cars | filterPipe:filterText"  >
        <th scope="row">{{car.id}}</th> 
         <td>{{car.carName}}</td>
         <td>{{car.brandId}}</td>

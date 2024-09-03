@@ -10,6 +10,7 @@ export class AppComponent {
   title: string = 'E-Ticaret';
    currentBrand:string;
   currentColor:string;
+  currentImage:string;
   // getChildData(data:string){
   //   this.currentBrand = data;
   //   this.currentColor=data;

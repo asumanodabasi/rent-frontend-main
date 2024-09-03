@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Car } from 'src/app/models/car';
 import { CarImage } from 'src/app/models/carImage';
 import { CarImageDetailService } from 'src/app/services/car-image-detail.service';
 
@@ -11,13 +12,13 @@ import { CarImageDetailService } from 'src/app/services/car-image-detail.service
 export class CarImageDetailComponent implements OnInit{
 
   carImages:CarImage[]=[]
-  imageApi="https://localhost:44356/uploads/images/"
+  imageApi="https://localhost:44356/images/"
   
   ngOnInit(): void {
     this.avtivated.params.subscribe(params=>{
-      if(params["carId"]){
+      if(params["carId"])
         this.getImageByCar(params["carId"]);
-      }
+      
     })
   }
 
