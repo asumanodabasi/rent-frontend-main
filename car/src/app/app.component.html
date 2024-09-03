@@ -1,5 +1,5 @@
 <div class="container">
-  <app-navi> </app-navi>
+  <app-navi  (filterTextChanged)="filterText = $event"> </app-navi>
 
 <div class="row">
   <div class="col-md-3">
@@ -9,6 +9,7 @@
 <app-car-image-detail></app-car-image-detail>
   </div>
   <div class="col-md-9">
+    <app-car [filterText]="filterText"></app-car>
       <div>{{currentBrand}}</div>
       <div>{{currentColor}}</div>
       <div>{{currentImage}}</div>

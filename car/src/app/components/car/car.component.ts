@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/car';
 import { CarImage } from 'src/app/models/carImage';
@@ -16,7 +16,7 @@ export class CarComponent implements OnInit {
   carImages:CarImage[];
   cuurentCars: Car;
   dataLoaded = false;
-  filterText: string = "";
+  @Input() filterText: string = "";
   constructor(private carService: CarService, private activatedRoutes: ActivatedRoute) {
 
   }
