@@ -30,8 +30,8 @@ export class CarComponent implements OnInit {
       else if (params["colorId"]) {
         this.getCarsByColorId(params["colorId"])
       }
-      else if(params["carImageId"]) {
-        this.getCarsByImageId(params["carImageId"]);
+      else if(params["carId"]) {
+        this.getCarsByImageId(params["carId"]);
       }
       else{
         this.getCars();

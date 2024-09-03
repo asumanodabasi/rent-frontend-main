@@ -30,6 +30,7 @@ export class CarService {
 
     }
 
+    //resme tiklayinca araba getirir.
     getCarsDetail(carImageId:number):Observable<ListResponseModel<CarImage>>{
       let newPath=this.apiUrl+"getDetail?carImageId="+carImageId;
       return this.httpClient.get<ListResponseModel<CarImage>> (newPath);

@@ -18,7 +18,9 @@ export class CarImageDetailComponent implements OnInit{
     this.avtivated.params.subscribe(params=>{
       if(params["carId"])
         this.getImageByCar(params["carId"]);
-      
+      else{
+        this.getAll();
+      }
     })
   }
 
@@ -27,6 +29,11 @@ export class CarImageDetailComponent implements OnInit{
     
   }
 
+  getAll(){
+    this.imageService.getAll().subscribe(response=>{
+      this.carImages=response.data;
+    })
+  }
   getImageByCar(carId:number){
     this.imageService.getImageByCar(carId).subscribe(response=>{
       this.carImages=response.data;
